@@ -1,8 +1,6 @@
 openSAFETY Distribution Version 1.4 
 ===================================
 
-[TOC]
-
 General Information
 --------------------
 
@@ -16,13 +14,21 @@ Included as part of the BSD license, an example implementation for openSAFETY 1.
 Rights of use 
 -------------
 
-    It is hereby explicitly stated that the licensee must ensure and provide    proof of error-free operation of his product using suitable test methods when using the openSAFETY protocol stack in safety-related products in accordance with IEC 61508:2010.
+    It is hereby explicitly stated that the licensee must ensure and provide
+    proof of error-free operation of his product using suitable test methods
+    when using the openSAFETY protocol stack in safety-related products in 
+    accordance with IEC 61508:2010.
 <!-- -->
     
-    Any errors found in the openSAFETY distribution by the licensee are to be published on SourceForge in the bug tracker for the openSAFETY project. The licensee is also obligated to continually check the error list without being explicitly prompted to do so and to evaluate the errors in the list in relation to the usage of the openSAFETY stack in his product.
+    Any errors found in the openSAFETY distribution by the licensee are to 
+    be published on SourceForge in the bug tracker for the openSAFETY project. 
+    The licensee is also obligated to continually check the error list without 
+    being explicitly prompted to do so and to evaluate the errors in the list 
+    in relation to the usage of the openSAFETY stack in his product.
 <!-- -->
     
-     When downloading the openSAFETY distribution, the user agrees to the rights of use and conditions of the BSD license as specified.
+    When downloading the openSAFETY distribution, the user agrees to the 
+    rights of use and conditions of the BSD license as specified.
 
 
 Installation
