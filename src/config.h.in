@@ -1,0 +1,31 @@
+#define openSAFETY_VERSION_MAJOR @openSAFETY_VERSION@
+#define openSAFETY_VERSION_MINOR @openSAFETY_CERTIFICATION@
+#define openSAFETY_VERSION_RELEASE @openSAFETY_VERSION_RELEASE@
+#define openSAFETY_VERSION_NAME @openSAFETY_VERSION_NAME@
+
+#cmakedefine TARGET_WINDOWS 1
+#cmakedefine TARGET_GENERIC 1
+#cmakedefine TARGET_ARM_ELF 1
+#cmakedefine TARGET_CYGWIN 1
+
+#cmakedefine HAVE_BZERO 1
+#ifndef HAVE_BZERO
+#define bzero(ptr, size) memset(ptr, 0, size);
+#endif
+
+#cmakedefine HAVE_INET_PTON 1
+#cmakedefine HAVE_SYS_SOCKET_H 1
+#cmakedefine HAVE_WINSOCK2_H 1
+#cmakedefine HAVE_NETINET_IN_H 1
+#cmakedefine HAVE_ARPA_INET_H 1
+#cmakedefine HAVE_ARPA_NAMESER_H 1
+#cmakedefine HAVE_SYS_PARAM_H 1
+#cmakedefine HAVE_SYS_TYPES_H 1
+
+#cmakedefine HAVE_SNPRINTF 1
+#cmakedefine HAVE_STRDUP 1
+#cmakedefine HAVE_VSNPRINTF 1
+
+#cmakedefine HAVE_PTHREAD_H 1
+
+#cmakedefine DO_CRC_MARK 1

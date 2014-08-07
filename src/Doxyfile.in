@@ -1,0 +1,475 @@
+# Doxyfile 1.8.3
+
+#---------------------------------------------------------------------------
+# Project related configuration options
+#---------------------------------------------------------------------------
+DOXYFILE_ENCODING      = UTF-8
+
+# The PROJECT_NAME tag is a single word (or a sequence of words surrounded
+# by quotes) that should identify the project.
+
+PROJECT_NAME = @PROJECT_NAME@
+
+# The PROJECT_NUMBER tag can be used to enter a project or revision number.
+# This could be handy for archiving the generated documentation or
+# if some version control system is used.
+
+PROJECT_NUMBER = @PROJECT_VERSION@
+
+PROJECT_BRIEF = "BSD licensed openSAFETY stack" 
+
+PROJECT_LOGO = @DOXYFILE_SOURCE_DIR@/../doc/images/opensafety_logo_small.png
+
+# The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute)
+# base path where the generated documentation will be put.
+# If a relative path is entered, it will be relative to the location
+# where doxygen was started. If left blank the current directory will be used.
+
+OUTPUT_DIRECTORY = @DOXYFILE_OUTPUT_DIR@
+
+# If the CREATE_SUBDIRS tag is set to YES, then doxygen will create
+# 4096 sub-directories (in 2 levels) under the output directory of each output
+# format and will distribute the generated files over these directories.
+# Enabling this option can be useful when feeding doxygen a huge amount of
+# source files, where putting all generated files in the same directory would
+# otherwise cause performance problems for the file system.
+
+CREATE_SUBDIRS         = YES
+OUTPUT_LANGUAGE        = English
+BRIEF_MEMBER_DESC      = YES
+REPEAT_BRIEF           = YES
+ABBREVIATE_BRIEF       = "The $name class"
+ABBREVIATE_BRIEF      += "The $name widget"
+ABBREVIATE_BRIEF      += "The $name file"
+ABBREVIATE_BRIEF      += "is"
+ABBREVIATE_BRIEF      += "provides"
+ABBREVIATE_BRIEF      += "contains"
+ABBREVIATE_BRIEF      += "represents"
+ABBREVIATE_BRIEF      += "a"
+ABBREVIATE_BRIEF      += "an"
+ABBREVIATE_BRIEF      += "the"
+ALWAYS_DETAILED_SEC    = NO
+INLINE_INHERITED_MEMB  = NO
+FULL_PATH_NAMES        = YES
+
+# If the FULL_PATH_NAMES tag is set to YES then the STRIP_FROM_PATH tag
+# can be used to strip a user-defined part of the path. Stripping is
+# only done if one of the specified strings matches the left-hand part of
+# the path. The tag can be used to show relative paths in the file list.
+# If left blank the directory from which doxygen is run is used as the
+# path to strip.
+
+STRIP_FROM_PATH = @DOXYFILE_SOURCE_DIR@
+
+# The STRIP_FROM_INC_PATH tag can be used to strip a user-defined part of
+# the path mentioned in the documentation of a class, which tells
+# the reader which header file to include in order to use a class.
+# If left blank only the name of the header file containing the class
+# definition is used. Otherwise one should specify the include paths that
+# are normally passed to the compiler using the -I flag.
+
+STRIP_FROM_INC_PATH    =
+SHORT_NAMES            = NO
+JAVADOC_AUTOBRIEF      = NO
+QT_AUTOBRIEF           = NO
+MULTILINE_CPP_IS_BRIEF = NO
+INHERIT_DOCS           = YES
+SEPARATE_MEMBER_PAGES  = NO
+TAB_SIZE               = 8
+ALIASES                =
+TCL_SUBST              =
+OPTIMIZE_OUTPUT_FOR_C  = YES
+OPTIMIZE_OUTPUT_JAVA   = NO
+OPTIMIZE_FOR_FORTRAN   = NO
+OPTIMIZE_OUTPUT_VHDL   = NO
+EXTENSION_MAPPING      =
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+BUILTIN_STL_SUPPORT    = NO
+CPP_CLI_SUPPORT        = NO
+SIP_SUPPORT            = NO
+IDL_PROPERTY_SUPPORT   = NO
+DISTRIBUTE_GROUP_DOC   = NO
+SUBGROUPING            = YES
+INLINE_GROUPED_CLASSES = NO
+INLINE_SIMPLE_STRUCTS  = NO
+TYPEDEF_HIDES_STRUCT   = YES
+SYMBOL_CACHE_SIZE      = 0
+LOOKUP_CACHE_SIZE      = 0
+#---------------------------------------------------------------------------
+# Build related configuration options
+#---------------------------------------------------------------------------
+EXTRACT_ALL            = NO
+EXTRACT_PRIVATE        = YES
+EXTRACT_PACKAGE        = NO
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_LOCAL_METHODS  = YES
+EXTRACT_ANON_NSPACES   = NO
+HIDE_UNDOC_MEMBERS     = YES
+HIDE_UNDOC_CLASSES     = YES
+HIDE_FRIEND_COMPOUNDS  = NO
+HIDE_IN_BODY_DOCS      = NO
+INTERNAL_DOCS          = NO
+CASE_SENSE_NAMES       = YES
+HIDE_SCOPE_NAMES       = YES
+SHOW_INCLUDE_FILES     = YES
+FORCE_LOCAL_INCLUDES   = NO
+INLINE_INFO            = YES
+SORT_MEMBER_DOCS       = YES
+SORT_BRIEF_DOCS        = NO
+SORT_MEMBERS_CTORS_1ST = NO
+SORT_GROUP_NAMES       = NO
+SORT_BY_SCOPE_NAME     = NO
+STRICT_PROTO_MATCHING  = NO
+GENERATE_TODOLIST      = YES
+GENERATE_TESTLIST      = YES
+GENERATE_BUGLIST       = YES
+GENERATE_DEPRECATEDLIST= YES
+ENABLED_SECTIONS       =
+MAX_INITIALIZER_LINES  = 30
+SHOW_USED_FILES        = YES
+SHOW_FILES             = YES
+SHOW_NAMESPACES        = YES
+FILE_VERSION_FILTER    =
+LAYOUT_FILE            = 
+# @DOXYFILE_SOURCE_DIR@/../doc/software-manual/layout.xml
+CITE_BIB_FILES         =
+#---------------------------------------------------------------------------
+# configuration options related to warning and progress messages
+#---------------------------------------------------------------------------
+QUIET                  = NO 
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+WARN_FORMAT            = "$file:$line: $text"
+WARN_LOGFILE           =
+#---------------------------------------------------------------------------
+# configuration options related to the input files
+#---------------------------------------------------------------------------
+INPUT                  = @DOXYFILE_SOURCE_DIR@/../doc/mainpage.txt
+INPUT                  += @DOXYFILE_SOURCE_DIR@/../doc/software/
+INPUT                  += @DOXYFILE_SOURCE_DIR@/../doc/integration_guide/
+INPUT                  += @DOXYFILE_SOURCE_DIR@/eplssrc/contrib
+INPUT                  += @DOXYFILE_SOURCE_DIR@/eplssrc/SN
+INPUT                  += @DOXYFILE_SOURCE_DIR@/eplssrc/SCM
+INPUT_ENCODING         = UTF-8
+FILE_PATTERNS          = *.c
+FILE_PATTERNS          += *.cin
+FILE_PATTERNS          += *.h
+FILE_PATTERNS          += *.md
+RECURSIVE              = YES
+
+# The EXCLUDE tag can be used to specify files and/or directories that should be
+# excluded from the INPUT source files. This way you can easily exclude a
+# subdirectory from a directory tree whose root is specified with the INPUT tag.
+
+EXCLUDE = "_darcs" "@DOXYFILE_SOURCE_DIR@/unittest"
+
+# The EXCLUDE_SYMLINKS tag can be used select whether or not files or
+# directories that are symbolic links (a Unix filesystem feature) are excluded
+# from the input.
+
+EXCLUDE_SYMLINKS       = NO
+EXCLUDE_PATTERNS       = 
+EXCLUDE_SYMBOLS        =
+
+# The EXAMPLE_PATH tag can be used to specify one or more files or
+# directories that contain example code fragments that are included (see
+# the \include command).
+
+EXAMPLE_PATH = "@CMAKE_CURRENT_SOURCE_DIR@/targets"
+
+# If the value of the EXAMPLE_PATH tag contains directories, you can use the
+# EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp
+# and *.h) to filter out the source-files in the directories. If left
+# blank all files are included.
+
+EXAMPLE_PATTERNS       = *
+EXAMPLE_RECURSIVE      = NO
+
+# The IMAGE_PATH tag can be used to specify one or more files or
+# directories that contain image that are included in the documentation (see
+# the \image command).
+
+IMAGE_PATH = 
+
+# The INPUT_FILTER tag can be used to specify a program that doxygen should
+# invoke to filter for each input file. Doxygen will invoke the filter program
+# by executing (via popen()) the command <filter> <input-file>, where <filter>
+# is the value of the INPUT_FILTER tag, and <input-file> is the name of an
+# input file. Doxygen will then use the output that the filter program writes
+# to standard output.
+# If FILTER_PATTERNS is specified, this tag will be
+# ignored.
+
+INPUT_FILTER           =
+FILTER_PATTERNS        =
+FILTER_SOURCE_FILES    = NO
+FILTER_SOURCE_PATTERNS =
+USE_MDFILE_AS_MAINPAGE = YES
+#---------------------------------------------------------------------------
+# configuration options related to source browsing
+#---------------------------------------------------------------------------
+SOURCE_BROWSER         = NO
+INLINE_SOURCES         = NO
+STRIP_CODE_COMMENTS    = YES
+REFERENCED_BY_RELATION = NO
+REFERENCES_RELATION    = NO
+REFERENCES_LINK_SOURCE = YES
+USE_HTAGS              = NO
+VERBATIM_HEADERS       = YES
+#---------------------------------------------------------------------------
+# configuration options related to the alphabetical class index
+#---------------------------------------------------------------------------
+ALPHABETICAL_INDEX     = YES
+COLS_IN_ALPHA_INDEX    = 5
+IGNORE_PREFIX          =
+#---------------------------------------------------------------------------
+# configuration options related to the HTML output
+#---------------------------------------------------------------------------
+GENERATE_HTML          = YES
+
+# The HTML_OUTPUT tag is used to specify where the HTML docs will be put.
+# If a relative path is entered the value of OUTPUT_DIRECTORY will be
+# put in front of it. If left blank `html' will be used as the default path.
+
+HTML_OUTPUT = "@DOXYFILE_HTML_DIR@"
+
+# The HTML_FILE_EXTENSION tag can be used to specify the file extension for
+# each generated HTML page (for example: .htm,.php,.asp). If it is left blank
+# doxygen will generate files with .html extension.
+
+HTML_FILE_EXTENSION    = .html
+HTML_HEADER            =
+HTML_FOOTER            =
+HTML_STYLESHEET        = # @CMAKE_CURRENT_SOURCE_DIR@/../doc/software-manual/opensafety.css
+HTML_EXTRA_STYLESHEET  =
+HTML_EXTRA_FILES       =
+HTML_COLORSTYLE_HUE    = 220
+HTML_COLORSTYLE_SAT    = 99
+HTML_COLORSTYLE_GAMMA  = 80
+HTML_TIMESTAMP         = YES
+HTML_DYNAMIC_SECTIONS  = NO
+HTML_INDEX_NUM_ENTRIES = 100
+GENERATE_DOCSET        = NO
+DOCSET_FEEDNAME        = "Doxygen generated docs"
+DOCSET_BUNDLE_ID       = org.doxygen.Project
+DOCSET_PUBLISHER_ID    = org.doxygen.Publisher
+DOCSET_PUBLISHER_NAME  = Publisher
+GENERATE_HTMLHELP      = NO
+CHM_FILE               =
+HHC_LOCATION           =
+GENERATE_CHI           = NO
+CHM_INDEX_ENCODING     =
+BINARY_TOC             = NO
+TOC_EXPAND             = NO
+GENERATE_QHP           = NO
+QCH_FILE               =
+QHP_NAMESPACE          =
+QHP_VIRTUAL_FOLDER     = doc
+QHP_CUST_FILTER_NAME   =
+QHP_CUST_FILTER_ATTRS  =
+QHP_SECT_FILTER_ATTRS  =
+QHG_LOCATION           =
+GENERATE_ECLIPSEHELP   = yes
+ECLIPSE_DOC_ID         = org.doxygen.openSAFETY
+DISABLE_INDEX          = NO
+GENERATE_TREEVIEW      = YES
+ENUM_VALUES_PER_LINE   = 1
+TREEVIEW_WIDTH         = 250
+EXT_LINKS_IN_WINDOW    = NO
+FORMULA_FONTSIZE       = 10
+FORMULA_TRANSPARENT    = YES
+USE_MATHJAX            = NO
+MATHJAX_FORMAT         = HTML-CSS
+MATHJAX_RELPATH        = http://cdn.mathjax.org/mathjax/latest
+MATHJAX_EXTENSIONS     =
+SEARCHENGINE           = YES
+SERVER_BASED_SEARCH    = NO
+EXTERNAL_SEARCH        = NO
+SEARCHENGINE_URL       =
+SEARCHDATA_FILE        = searchdata.xml
+EXTRA_SEARCH_MAPPINGS  =
+#---------------------------------------------------------------------------
+# configuration options related to the LaTeX output
+#---------------------------------------------------------------------------
+
+# If the GENERATE_LATEX tag is set to YES (the default) Doxygen will
+# generate Latex output.
+
+GENERATE_LATEX = @DOXYFILE_LATEX@
+
+# The LATEX_OUTPUT tag is used to specify where the LaTeX docs will be put.
+# If a relative path is entered the value of OUTPUT_DIRECTORY will be
+# put in front of it. If left blank `latex' will be used as the default path.
+
+LATEX_OUTPUT = "@DOXYFILE_LATEX_DIR@"
+
+# The LATEX_CMD_NAME tag can be used to specify the LaTeX command name to be
+# invoked. If left blank `latex' will be used as the default command name.
+
+LATEX_CMD_NAME = "@LATEX_COMPILER@"
+
+# The MAKEINDEX_CMD_NAME tag can be used to specify the command name to
+# generate index for LaTeX. If left blank `makeindex' will be used as the
+# default command name.
+
+MAKEINDEX_CMD_NAME = "@MAKEINDEX_COMPILER@"
+
+# If the COMPACT_LATEX tag is set to YES Doxygen generates more compact
+# LaTeX documents. This may be useful for small projects and may help to
+# save some trees in general.
+
+COMPACT_LATEX          = NO
+PAPER_TYPE             = a4wide
+EXTRA_PACKAGES         =
+LATEX_HEADER           =
+LATEX_FOOTER           =
+PDF_HYPERLINKS         = YES
+
+# If the USE_PDFLATEX tag is set to YES, pdflatex will be used instead of
+# plain latex in the generated Makefile. Set this option to YES to get a
+# higher quality PDF documentation.
+
+USE_PDFLATEX = @DOXYFILE_PDFLATEX@
+
+# If the LATEX_BATCHMODE tag is set to YES, doxygen will add the \\batchmode.
+# command to the generated LaTeX files. This will instruct LaTeX to keep
+# running if errors occur, instead of asking the user for help.
+# This option is also used when generating formulas in HTML.
+
+LATEX_BATCHMODE        = NO
+LATEX_HIDE_INDICES     = NO
+LATEX_SOURCE_CODE      = NO
+LATEX_BIB_STYLE        = plain
+#---------------------------------------------------------------------------
+# configuration options related to the RTF output
+#---------------------------------------------------------------------------
+GENERATE_RTF           = NO
+RTF_OUTPUT             = rtf
+COMPACT_RTF            = NO
+RTF_HYPERLINKS         = NO
+RTF_STYLESHEET_FILE    =
+RTF_EXTENSIONS_FILE    =
+#---------------------------------------------------------------------------
+# configuration options related to the man page output
+#---------------------------------------------------------------------------
+GENERATE_MAN           = NO
+MAN_OUTPUT             = man
+MAN_EXTENSION          = .3
+MAN_LINKS              = NO
+#---------------------------------------------------------------------------
+# configuration options related to the XML output
+#---------------------------------------------------------------------------
+GENERATE_XML           = NO
+XML_OUTPUT             = xml
+XML_SCHEMA             =
+XML_DTD                =
+XML_PROGRAMLISTING     = YES
+#---------------------------------------------------------------------------
+# configuration options for the AutoGen Definitions output
+#---------------------------------------------------------------------------
+GENERATE_AUTOGEN_DEF   = NO
+#---------------------------------------------------------------------------
+# configuration options related to the Perl module output
+#---------------------------------------------------------------------------
+GENERATE_PERLMOD       = NO
+PERLMOD_LATEX          = NO
+PERLMOD_PRETTY         = YES
+PERLMOD_MAKEVAR_PREFIX =
+#---------------------------------------------------------------------------
+# Configuration options related to the preprocessor
+#---------------------------------------------------------------------------
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+SEARCH_INCLUDES        = YES
+INCLUDE_PATH           =
+INCLUDE_FILE_PATTERNS  =
+PREDEFINED             = "B_INSTNUM=b_instNum"
+PREDEFINED             += "B_INSTNUM_=b_instNum, "
+PREDEFINED             += "B_INSTNUMidx=b_instNum"
+PREDEFINED             += "BYTE_B_INSTNUM=UINT8 b_instNum"
+PREDEFINED             += "BYTE_B_INSTNUM_=UINT8 b_instNum, "
+PREDEFINED             += "SAFE_INIT_SEKTOR= "
+PREDEFINED             += "EPLS_cfg_ERROR_STRING=EPLS_k_ENABLE"
+PREDEFINED             += "SAFE_NO_INIT_SEKTOR= "
+PREDEFINED             += "k_NUM_OF_ADD_TX_SPDO=( k_NO_ADD_TX_SPDO + 1 )"
+PREDEFINED             += "SOD_cfg_APPLICATION_OBJ=EPLS_k_ENABLE"
+PREDEFINED             += "SPDO_cfg_MAX_NO_RX_SPDO=1"
+PREDEFINED             += "SPDO_cfg_SPDO_NUM_LOOK_UP_TABLE=EPLS_k_DISABLE"
+EXPAND_AS_DEFINED      =
+SKIP_FUNCTION_MACROS   = YES
+#---------------------------------------------------------------------------
+# Configuration::additions related to external references
+#---------------------------------------------------------------------------
+TAGFILES               =
+GENERATE_TAGFILE       =
+ALLEXTERNALS           = NO
+EXTERNAL_GROUPS        = YES
+PERL_PATH              = /usr/bin/perl
+#---------------------------------------------------------------------------
+# Configuration options related to the dot tool
+#---------------------------------------------------------------------------
+CLASS_DIAGRAMS         = YES
+MSCGEN_PATH            =
+HIDE_UNDOC_RELATIONS   = YES
+
+# If you set the HAVE_DOT tag to YES then doxygen will assume the dot tool is
+# available from the path. This tool is part of Graphviz, a graph visualization
+# toolkit from AT&T and Lucent Bell Labs. The other options in this section
+# have no effect if this option is set to NO (the default)
+
+HAVE_DOT = YES
+
+# By default doxygen will write a font called FreeSans.ttf to the output
+# directory and reference it in all dot files that doxygen generates. This
+# font does not include all possible unicode characters however, so when you need
+# these (or just want a differently looking font) you can specify the font name
+# using DOT_FONTNAME. You need need to make sure dot is able to find the font,
+# which can be done by putting it in a standard location or by setting the
+# DOTFONTPATH environment variable or by setting DOT_FONTPATH to the directory
+# containing the font.
+
+DOT_NUM_THREADS        = 0
+DOT_FONTNAME           = Helvetica
+DOT_FONTSIZE           = 10
+DOT_FONTPATH           =
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+GROUP_GRAPHS           = YES
+UML_LOOK               = YES
+UML_LIMIT_NUM_FIELDS   = 10
+TEMPLATE_RELATIONS     = NO
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+GRAPHICAL_HIERARCHY    = YES
+DIRECTORY_GRAPH        = YES
+
+# The DOT_IMAGE_FORMAT tag can be used to set the image format of the images
+# generated by dot. Possible values are png, jpg, or gif
+# If left blank png will be used.
+
+DOT_IMAGE_FORMAT = svg
+
+# The tag DOT_PATH can be used to specify the path where the dot tool can be
+# found. If left blank, it is assumed the dot tool can be found in the path.
+
+DOT_PATH = "@DOXYGEN_DOT_PATH@"
+
+# The DOTFILE_DIRS tag can be used to specify one or more directories that
+# contain dot files that are included in the documentation (see the
+# \dotfile command).
+
+DOTFILE_DIRS           =
+MSCFILE_DIRS           =
+DOT_GRAPH_MAX_NODES    = 250
+MAX_DOT_GRAPH_DEPTH    = 0
+DOT_TRANSPARENT        = NO
+DOT_MULTI_TARGETS      = NO
+GENERATE_LEGEND        = YES
+DOT_CLEANUP            = YES

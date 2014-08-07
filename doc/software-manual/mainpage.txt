@@ -1,0 +1,10 @@
+/**
+********************************************************************************
+\mainpage 
+
+This is the openSAFETY stack software users manual.
+
+- \subpage swconcept
+- \subpage swstructure
+*******************************************************************************/
+

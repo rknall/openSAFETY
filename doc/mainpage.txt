@@ -1,0 +1,45 @@
+/**
+ * @mainpage 
+ * 
+ * @page openSafetySW openSAFETY Software Distribution
+ * 
+ * - @subpage swconcept
+ * - @subpage swstructure
+ * 
+ * @page integration_guide openSAFETY Integration Guide
+ * - @subpage integrate_sn
+ */
+
+/**
+ * @page swconcept openSAFETY Software Concept
+ * 
+ * - @subpage concept_nwstructure
+ */
+
+/**
+ * @page swstructure openSAFETY Software Structure
+ * 
+ * - @subpage sw_ssc
+ * - @subpage sw_sfs
+ * - @subpage structure_sod
+ * - @subpage sw_scfm
+ * - @subpage sw_sdn
+ * - @subpage sw_serr
+ * - @subpage sw_scm
+ * - @subpage sw_spdo
+ * - @subpage sw_snmtm
+ * - @subpage sw_snmts
+ * - @subpage sw_ssdos
+ * - @subpage sw_ssdoc
+ * - @subpage sw_epls
+ */
+
+/**
+ * @page integrate_sn Implementation of an SN
+ * 
+ * - @subpage integrate_sn_necessary
+ * - @subpage integrate_sn_callbacks
+ * - @subpage integrate_sn_scaling
+ * - @subpage integrate_sn_sod
+ * 
+ */
